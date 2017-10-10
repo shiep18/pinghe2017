@@ -1,8 +1,10 @@
 import serial
+import time
 
 print 'hello'
 
 ser=serial.Serial(port='COM4')
+
 n=ser.write('1')
 
 print 'after write'
