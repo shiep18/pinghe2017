@@ -5,7 +5,12 @@ print 'hello'
 
 ser=serial.Serial(port='COM4')
 
+time.sleep(2)
+
 n=ser.write('1')
+n=ser.write('2')
+n=ser.write('3')
+
 
 print 'after write'
 print n
@@ -23,14 +28,3 @@ def run():
             return
 
 run()
-
-
-
-
-
-    
-
-    
-
-
-
