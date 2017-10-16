@@ -1,17 +1,17 @@
 import serial
+import serial.tools.list_ports
 
 print 'hello'
 
 ports = list(serial.tools.list_ports.comports())
 
 print (ports)
+
 for p in ports:
     print (p[1])
     if "CH340" in p[1]:
 	    ser = serial.Serial(port= p[0])
-        print 'open serial'
-        print p[0]
-    else:
+    else :
 	    print ("No Arduino Device was found connected to the computer")
 
 #ser=serial.Serial(port='COM4')
