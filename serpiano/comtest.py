@@ -1,19 +1,20 @@
 import serial
-import time
 
 print 'hello'
 
-ser=serial.Serial(port='COM4')
+ports = list(serial.tools.list_ports.comports())
 
-time.sleep(2)
+print (ports)
+for p in ports:
+    print (p[1])
+    if "CH340" in p[1]:
+	    ser = serial.Serial(port= p[0])
+        print 'open serial'
+        print p[0]
+    else:
+	    print ("No Arduino Device was found connected to the computer")
 
-n=ser.write('1')
-n=ser.write('2')
-n=ser.write('3')
-
-
-print 'after write'
-print n
+#ser=serial.Serial(port='COM4')
 
 def run():
     action = "aaa"
