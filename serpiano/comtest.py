@@ -7,6 +7,9 @@ ports = list(serial.tools.list_ports.comports())
 
 print (ports)
 
+song1 = [1,1,5,5,6,6,5,4,4,3,3,2,2,1]
+song2 = [1,2,3,1,1,2,3,1,3,4,5,3,4,5]
+
 for p in ports:
     print (p[1])
     if "CH340" in p[1]:
