@@ -2,7 +2,7 @@ import serial
 import serial.tools.list_ports
 import time
 
-print 'hello'
+print ('hello')
 
 ports = list(serial.tools.list_ports.comports())
 
@@ -14,7 +14,7 @@ song2 = ['1','2','3','1','1','2','3','1','3','4','5','3','4','5']
 for p in ports:
     print (p[1])
     if "Arduino" in p[1]:
-	    ser = serial.Serial(port= p[0])
+	    ser=serial.Serial(port=p[0])
     else :
 	    print ("No Arduino Device was found connected to the computer")
 
@@ -24,15 +24,16 @@ for p in ports:
 def run():
     action = "empty"
     while action != "q":
-        print 'select which tone do you want to play ? 1,2 q and others for quit'
-        action = raw_input("> ")
+        print ('select which song do you want to play ? 1,2 q and others for quit')
+        action = input("> ")
         if action == "1":
             for notes in song1:
-                ser.write(notes)
-                print "send:"+notes
+                ser.write(notes.encode())
+                print ("send:"+notes)
                 time.sleep(1)
         elif action == "2":
-            ser.write('2')
+            ser.write('2'.encode())
+
         else :
             return
 
