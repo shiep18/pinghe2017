@@ -24,7 +24,7 @@ for p in ports:
 	    print ("No Arduino Device was found connected to the computer")
 
 #ser=serial.Serial(port='COM4')
-#ser=serial.Serial(port]='/dev/ttymodem542')
+#ser=serial.Serial(port='/dev/ttymodem542')
 
 def run():
     action = "empty"
