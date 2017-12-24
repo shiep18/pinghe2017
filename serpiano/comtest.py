@@ -9,12 +9,12 @@ print (ports)
 song1 = ['1','1','5','5','6','6','5','5','4','4','3','3','2','2','1','1']
 song2 = ['1','2','3','1','1','2','3','1','3','4','5','3','4','5']
 
-f = open('mysongs.csv', 'r')
-data = f.read()
-rows = data.split('\n')
-print(rows[0:5])
-row=rows[0]
-song1 = row.split(',')
+#f = open('mysongs.csv', 'r')
+#data = f.read()
+#rows = data.split('\n')
+#print(rows[0:5])
+#row=rows[0]
+#song1 = row.split(',')
 
 for p in ports:
     print (p[1])
