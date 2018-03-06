@@ -16,8 +16,19 @@ song2 = ['1','2','3','1','1','2','3','1','3','4','5','3','4','5']
 #row=rows[0]
 #song1 = row.split(',')
 
+<<<<<<< HEAD
 
 ser=serial.Serial(port='COM11')
+=======
+for p in ports:
+    print (p[1])
+    if "Arduino" in p[1]:
+	    ser=serial.Serial(port=p[0])
+    else :
+	    print ("No Arduino Device was found connected to the computer")
+
+#ser=serial.Serial(port='COM4')
+>>>>>>> 770e0588fe5ab49dd1215ec73382a5855a68f9da
 #ser=serial.Serial(port='/dev/ttymodem542')
 
 def run():
